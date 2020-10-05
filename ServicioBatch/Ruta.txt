@@ -1,0 +1,4 @@
+installutil ServicioBatch.exe
+installinstallutil /u ServicioBatch.exe
+
+C:\Users\chdra\Desktop\PROYECTOS\ProyectoIS Version3.1\ServicioBatch\ServicioBatch\bin\Debug>

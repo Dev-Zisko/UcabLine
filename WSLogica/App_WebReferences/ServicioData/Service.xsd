@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52198/WCFService3/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+  <xs:element name="crearLinea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idLinea" type="xs:int" />
+        <xs:element minOccurs="0" name="nombreLinea" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="trenes" type="xs:int" />
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearLineaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="crearLineaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearEstacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEstacion" type="xs:int" />
+        <xs:element minOccurs="0" name="estacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tiempo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreLinea" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearEstacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="crearEstacionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarLinea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idLinea" type="xs:int" />
+        <xs:element minOccurs="0" name="nombreLinea" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="trenes" type="xs:int" />
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarLineaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eliminarLineaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarEstacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEstacion" type="xs:int" />
+        <xs:element minOccurs="0" name="estacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idLinea" type="xs:int" />
+        <xs:element minOccurs="0" name="tiempo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarEstacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eliminarEstacionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modificarLinea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreLinea" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="trenes" type="xs:int" />
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="buscaLinea" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modificarLineaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="modificarLineaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modificarEstacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tiempo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="buscaEstacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreLinea" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modificarEstacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="modificarEstacionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modificarEstadoLinea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreLinea" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modificarEstadoLineaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="modificarEstadoLineaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modificarEstadoEstacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modificarEstadoEstacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="modificarEstadoEstacionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearTrasbordoDoble">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTrasbordoD" type="xs:int" />
+        <xs:element minOccurs="0" name="estacion1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estacion2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="linea1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="linea2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearTrasbordoDobleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="crearTrasbordoDobleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTrasbordoDoble">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTrasbordoD" type="xs:int" />
+        <xs:element minOccurs="0" name="estacion1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estacion2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="linea1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="linea2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTrasbordoDobleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eliminarTrasbordoDobleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="generarListaLinea">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="generarListaLineaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="generarListaLineaResult" nillable="true" type="q1:ArrayOfLinea" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="generarListaEstaciones">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="generarListaEstacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="generarListaEstacionesResult" nillable="true" type="q2:ArrayOfEstacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerLinea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreLinea" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerLineaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="obtenerLineaResult" nillable="true" type="q3:Linea" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerEstacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreLinea" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerEstacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="obtenerEstacionResult" nillable="true" type="q4:Estacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="llenarTablas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="llenarTablasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="llenarTablasResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarLlegadas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tiempo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreLinea" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarLlegadasResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

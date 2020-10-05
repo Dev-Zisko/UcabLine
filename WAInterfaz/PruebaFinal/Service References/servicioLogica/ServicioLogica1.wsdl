@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioLogica" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:11430/WSLogica/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:11430/WSLogica/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:11430/WSLogica/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://localhost:11430/WSLogica/Service.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:11430/WSLogica/Service.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioLogica_ValidarTextBoxNumeros_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarTextBoxNumeros" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ValidarTextBoxNumeros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarTextBoxNumerosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ComprobarEstacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarEstacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ComprobarEstacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarEstacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ValidarNombres_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarNombres" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ValidarNombres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarNombresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_CrearLinea_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearLinea" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_CrearLinea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_CrearEstacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearEstacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_CrearEstacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearEstacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ModificarLinea_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarLinea" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ModificarLinea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerLinea_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerLinea" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerLinea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerEstacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEstacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerEstacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEstacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ModificarEstacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEstacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ModificarEstacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEstacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ModificarEstadoEstacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEstadoEstacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ModificarEstadoEstacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEstadoEstacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ModificarEstadoLinea_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEstadoLinea" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ModificarEstadoLinea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarEstadoLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_EliminarLinea_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarLinea" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_EliminarLinea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_EliminarEstacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEstacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_EliminarEstacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEstacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_CrearTrasbordoDoble_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearTrasbordoDoble" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_CrearTrasbordoDoble_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearTrasbordoDobleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_CrearTrasbordoSimple_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearTrasbordoSimple" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_CrearTrasbordoSimple_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearTrasbordoSimpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_EliminarTrasbordoSimple_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTrasbordoSimple" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_EliminarTrasbordoSimple_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTrasbordoSimpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_EliminarTransbordoDoble_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTransbordoDoble" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_EliminarTransbordoDoble_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTransbordoDobleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerListaTrasbordoD_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaTrasbordoD" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerListaTrasbordoD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaTrasbordoDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerListaStringTransbordoD_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaStringTransbordoD" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerListaStringTransbordoD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaStringTransbordoDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerListaLineas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaLineas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerListaLineas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaLineasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerListaEstaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaEstaciones" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerListaEstaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaEstacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerListaTrasbordoS_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaTrasbordoS" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerListaTrasbordoS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaTrasbordoSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerTrasbordoS_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTrasbordoS" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerTrasbordoS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTrasbordoSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_LlenarTablaEstaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:LlenarTablaEstaciones" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_LlenarTablaEstaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LlenarTablaEstacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_LlenarTablaLineas_InputMessage">
+    <wsdl:part name="parameters" element="tns:LlenarTablaLineas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_LlenarTablaLineas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LlenarTablaLineasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_LlenarTablaTrasbordosDobles_InputMessage">
+    <wsdl:part name="parameters" element="tns:LlenarTablaTrasbordosDobles" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_LlenarTablaTrasbordosDobles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LlenarTablaTrasbordosDoblesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ValidarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ValidarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerAdministrador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAdministrador" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ObtenerAdministrador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAdministradorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ModificarAdministrador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarAdministrador" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ModificarAdministrador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarAdministradorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ValidarTextBoxVacio_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarTextBoxVacio" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ValidarTextBoxVacio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarTextBoxVacioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ValidarTextBoxCaracteresEsp_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarTextBoxCaracteresEsp" />
+  </wsdl:message>
+  <wsdl:message name="IServicioLogica_ValidarTextBoxCaracteresEsp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarTextBoxCaracteresEspResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioLogica">
+    <wsdl:operation name="ValidarTextBoxNumeros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ValidarTextBoxNumeros" message="tns:IServicioLogica_ValidarTextBoxNumeros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ValidarTextBoxNumerosResponse" message="tns:IServicioLogica_ValidarTextBoxNumeros_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarEstacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ComprobarEstacion" message="tns:IServicioLogica_ComprobarEstacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ComprobarEstacionResponse" message="tns:IServicioLogica_ComprobarEstacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarNombres">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ValidarNombres" message="tns:IServicioLogica_ValidarNombres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ValidarNombresResponse" message="tns:IServicioLogica_ValidarNombres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearLinea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/CrearLinea" message="tns:IServicioLogica_CrearLinea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/CrearLineaResponse" message="tns:IServicioLogica_CrearLinea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearEstacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/CrearEstacion" message="tns:IServicioLogica_CrearEstacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/CrearEstacionResponse" message="tns:IServicioLogica_CrearEstacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarLinea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ModificarLinea" message="tns:IServicioLogica_ModificarLinea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ModificarLineaResponse" message="tns:IServicioLogica_ModificarLinea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLinea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerLinea" message="tns:IServicioLogica_ObtenerLinea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerLineaResponse" message="tns:IServicioLogica_ObtenerLinea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerEstacion" message="tns:IServicioLogica_ObtenerEstacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerEstacionResponse" message="tns:IServicioLogica_ObtenerEstacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ModificarEstacion" message="tns:IServicioLogica_ModificarEstacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ModificarEstacionResponse" message="tns:IServicioLogica_ModificarEstacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstadoEstacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ModificarEstadoEstacion" message="tns:IServicioLogica_ModificarEstadoEstacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ModificarEstadoEstacionResponse" message="tns:IServicioLogica_ModificarEstadoEstacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstadoLinea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ModificarEstadoLinea" message="tns:IServicioLogica_ModificarEstadoLinea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ModificarEstadoLineaResponse" message="tns:IServicioLogica_ModificarEstadoLinea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarLinea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/EliminarLinea" message="tns:IServicioLogica_EliminarLinea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/EliminarLineaResponse" message="tns:IServicioLogica_EliminarLinea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/EliminarEstacion" message="tns:IServicioLogica_EliminarEstacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/EliminarEstacionResponse" message="tns:IServicioLogica_EliminarEstacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTrasbordoDoble">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/CrearTrasbordoDoble" message="tns:IServicioLogica_CrearTrasbordoDoble_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/CrearTrasbordoDobleResponse" message="tns:IServicioLogica_CrearTrasbordoDoble_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTrasbordoSimple">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/CrearTrasbordoSimple" message="tns:IServicioLogica_CrearTrasbordoSimple_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/CrearTrasbordoSimpleResponse" message="tns:IServicioLogica_CrearTrasbordoSimple_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTrasbordoSimple">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/EliminarTrasbordoSimple" message="tns:IServicioLogica_EliminarTrasbordoSimple_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/EliminarTrasbordoSimpleResponse" message="tns:IServicioLogica_EliminarTrasbordoSimple_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTransbordoDoble">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/EliminarTransbordoDoble" message="tns:IServicioLogica_EliminarTransbordoDoble_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/EliminarTransbordoDobleResponse" message="tns:IServicioLogica_EliminarTransbordoDoble_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaTrasbordoD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerListaTrasbordoD" message="tns:IServicioLogica_ObtenerListaTrasbordoD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerListaTrasbordoDResponse" message="tns:IServicioLogica_ObtenerListaTrasbordoD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaStringTransbordoD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerListaStringTransbordoD" message="tns:IServicioLogica_ObtenerListaStringTransbordoD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerListaStringTransbordoDResponse" message="tns:IServicioLogica_ObtenerListaStringTransbordoD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaLineas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerListaLineas" message="tns:IServicioLogica_ObtenerListaLineas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerListaLineasResponse" message="tns:IServicioLogica_ObtenerListaLineas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaEstaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerListaEstaciones" message="tns:IServicioLogica_ObtenerListaEstaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerListaEstacionesResponse" message="tns:IServicioLogica_ObtenerListaEstaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaTrasbordoS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerListaTrasbordoS" message="tns:IServicioLogica_ObtenerListaTrasbordoS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerListaTrasbordoSResponse" message="tns:IServicioLogica_ObtenerListaTrasbordoS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTrasbordoS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerTrasbordoS" message="tns:IServicioLogica_ObtenerTrasbordoS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerTrasbordoSResponse" message="tns:IServicioLogica_ObtenerTrasbordoS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LlenarTablaEstaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/LlenarTablaEstaciones" message="tns:IServicioLogica_LlenarTablaEstaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/LlenarTablaEstacionesResponse" message="tns:IServicioLogica_LlenarTablaEstaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LlenarTablaLineas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/LlenarTablaLineas" message="tns:IServicioLogica_LlenarTablaLineas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/LlenarTablaLineasResponse" message="tns:IServicioLogica_LlenarTablaLineas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LlenarTablaTrasbordosDobles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/LlenarTablaTrasbordosDobles" message="tns:IServicioLogica_LlenarTablaTrasbordosDobles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/LlenarTablaTrasbordosDoblesResponse" message="tns:IServicioLogica_LlenarTablaTrasbordosDobles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ValidarUsuario" message="tns:IServicioLogica_ValidarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ValidarUsuarioResponse" message="tns:IServicioLogica_ValidarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAdministrador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerAdministrador" message="tns:IServicioLogica_ObtenerAdministrador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ObtenerAdministradorResponse" message="tns:IServicioLogica_ObtenerAdministrador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAdministrador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ModificarAdministrador" message="tns:IServicioLogica_ModificarAdministrador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ModificarAdministradorResponse" message="tns:IServicioLogica_ModificarAdministrador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarTextBoxVacio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ValidarTextBoxVacio" message="tns:IServicioLogica_ValidarTextBoxVacio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ValidarTextBoxVacioResponse" message="tns:IServicioLogica_ValidarTextBoxVacio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarTextBoxCaracteresEsp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioLogica/ValidarTextBoxCaracteresEsp" message="tns:IServicioLogica_ValidarTextBoxCaracteresEsp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioLogica/ValidarTextBoxCaracteresEspResponse" message="tns:IServicioLogica_ValidarTextBoxCaracteresEsp_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioLogica" type="tns:IServicioLogica">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidarTextBoxNumeros">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ValidarTextBoxNumeros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarEstacion">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ComprobarEstacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarNombres">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ValidarNombres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearLinea">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/CrearLinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearEstacion">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/CrearEstacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarLinea">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ModificarLinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLinea">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ObtenerLinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstacion">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ObtenerEstacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstacion">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ModificarEstacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstadoEstacion">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ModificarEstadoEstacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstadoLinea">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ModificarEstadoLinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarLinea">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/EliminarLinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstacion">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/EliminarEstacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTrasbordoDoble">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/CrearTrasbordoDoble" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTrasbordoSimple">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/CrearTrasbordoSimple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTrasbordoSimple">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/EliminarTrasbordoSimple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTransbordoDoble">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/EliminarTransbordoDoble" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaTrasbordoD">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ObtenerListaTrasbordoD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaStringTransbordoD">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ObtenerListaStringTransbordoD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaLineas">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ObtenerListaLineas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaEstaciones">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ObtenerListaEstaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaTrasbordoS">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ObtenerListaTrasbordoS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTrasbordoS">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ObtenerTrasbordoS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LlenarTablaEstaciones">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/LlenarTablaEstaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LlenarTablaLineas">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/LlenarTablaLineas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LlenarTablaTrasbordosDobles">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/LlenarTablaTrasbordosDobles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ValidarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAdministrador">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ObtenerAdministrador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAdministrador">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ModificarAdministrador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarTextBoxVacio">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ValidarTextBoxVacio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarTextBoxCaracteresEsp">
+      <soap:operation soapAction="http://tempuri.org/IServicioLogica/ValidarTextBoxCaracteresEsp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioLogica">
+    <wsdl:port name="BasicHttpBinding_IServicioLogica" binding="tns:BasicHttpBinding_IServicioLogica">
+      <soap:address location="http://localhost:11430/WSLogica/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

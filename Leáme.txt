@@ -1,0 +1,5 @@
+Los Archivos Xml están dentro de la carpeta WSData/Datos.
+Dentro de cada carpeta se encuentras los archivos de extension sln para facilitar la apertura de cada modulo en visual studio.
+
+nickname del administrador: admin
+Contraseña: admin

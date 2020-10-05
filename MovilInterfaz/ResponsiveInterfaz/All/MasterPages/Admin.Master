@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="ResponsiveInterfaz.All.MasterPages.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="/All/Style/ResponsiveStyle.css" rel="stylesheet" type="text/css" />
+    <title>UcabLine</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+<div id="Page">
+
+        
+        <div id="Head">
+
+        </div>
+        <div id="Boton">
+            <ul>
+                <li><a href="/All/Pages/User/MainUser.aspx">Salir</a></li>
+            </ul>
+        </div>
+
+
+        <div id="Boton1">
+            <ul>
+                <li><a href="/All/Pages/Login/EditData.aspx">Editar datos</a></li>
+            </ul>
+        </div>
+        
+
+
+            <div id="Center">
+
+                <div id="Menu">
+                    <ul>
+                        <li> <a href="/All/Pages/Admin/CreateL.aspx">Crear línea</a></li>
+                        <li> <a href="/All/Pages/Admin/CreateS.aspx">Crear estación</a></li>
+                        <li> <a href="/All/Pages/Admin/CreateTS.aspx">Crear trasbordo simple</a></li>
+                        <li> <a href="/All/Pages/Admin/CreateTD.aspx">Crear trasbordo doble</a></li>
+                        <li> <a href="/All/Pages/Admin/ModifyL.aspx">Modificar línea</a></li>
+                        <li> <a href="/All/Pages/Admin/ModifyS.aspx">Modificar estación</a></li>
+                        <li> <a href="/All/Pages/Admin/ModifySS.aspx">Modificar estado de estaciones</a></li>
+                        <li> <a href="/All/Pages/Admin/ModifySL.aspx">Visualizar y modificar estado de la línea</a></li>
+                        <li> <a href="/All/Pages/Admin/ViewTS.aspx">Visualizar trasbordos simples</a></li>
+                        <li> <a href="/All/Pages/Admin/ViewTD.aspx">Visualizar trasbordos dobles</a></li>
+                        <li> <a href="/All/Pages/Admin/RemoveL.aspx">Eliminar línea</a></li>
+                        <li> <a href="/All/Pages/Admin/RemoveS.aspx">Eliminar estación</a></li>
+                        <li> <a href="/All/Pages/Admin/RemoveTS.aspx">Eliminar trasbordo simple</a></li>
+                        <li> <a href="/All/Pages/Admin/RemoveTD.aspx">Eliminar trasbordo doble</a></li>
+                    </ul>
+                </div>
+                <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+
+                <div id="Foot">
+                    <span>© Copyright 2017 UcabLine. Todos los derechos reservados.</span>
+                </div>
+    </div>    
+    </div>
+    </form>
+</body>
+</html>

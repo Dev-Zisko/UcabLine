@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ResponsiveInterfaz.All.MasterPages.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="/All/Style/ResponsiveStyle.css" rel="stylesheet" type="text/css" />
+    <title>UcabLine</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <div id="Page">
+
+        
+        <div id="Head">
+
+        </div>
+        <div id="Boton">
+            <ul>
+                <li><a href="/All/Pages/User/MainUser.aspx">Home</a></li>
+            </ul>
+        </div>
+
+
+        <div id="Boton1">
+            <ul>
+                <li><a href="/All/Pages/Login/Login.aspx">Login</a></li>
+            </ul>
+        </div>
+        
+
+
+            <div id="Center">
+
+                <div id="Menu">
+                    <ul>
+                        <li> <a href="/All/Pages/User/ViewL.aspx">Visualizar líneas</a></li>
+                        <li> <a href="/All/Pages/User/ViewS.aspx">Visualizar estaciones</a></li>
+                        <li> <a href="/All/Pages/User/ViewTS.aspx">Visualizar trasbordos simples</a></li>
+                        <li> <a href="/All/Pages/User/ViewTD.aspx">Visualizar trasbordos dobles</a></li>
+                    </ul>
+                </div>
+
+                <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+
+                <div id="Foot">
+                    <span>© Copyright 2017 UcabLine. Todos los derechos reservados.</span>
+                </div>
+    </div>    
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D36998C-47AB-4B0F-AEDE-57D34FE3D350}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ResponsiveInterfaz</RootNamespace>
+    <AssemblyName>ResponsiveInterfaz</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="All\Pages\Admin\CreateL.aspx" />
+    <Content Include="All\Pages\Admin\CreateS.aspx" />
+    <Content Include="All\Pages\Admin\CreateTD.aspx" />
+    <Content Include="All\Pages\Admin\CreateTS.aspx" />
+    <Content Include="All\Pages\Admin\EditData.aspx" />
+    <Content Include="All\Pages\Admin\MainAdmin.aspx" />
+    <Content Include="All\Pages\Admin\ModifyL.aspx" />
+    <Content Include="All\Pages\Admin\ModifyS.aspx" />
+    <Content Include="All\Pages\Admin\ModifySL.aspx" />
+    <Content Include="All\Pages\Admin\ModifySS.aspx" />
+    <Content Include="All\Pages\Admin\RemoveL.aspx" />
+    <Content Include="All\Pages\Admin\RemoveS.aspx" />
+    <Content Include="All\Pages\Admin\RemoveTD.aspx" />
+    <Content Include="All\Pages\Admin\RemoveTS.aspx" />
+    <Content Include="All\Pages\Admin\ViewTD.aspx" />
+    <Content Include="All\Pages\Admin\ViewTS.aspx" />
+    <Content Include="All\Pages\Login\Login.aspx" />
+    <Content Include="All\Pages\User\MainUser.aspx" />
+    <Content Include="All\Pages\User\ViewL.aspx" />
+    <Content Include="All\Pages\User\ViewS.aspx" />
+    <Content Include="All\Pages\User\ViewTD.aspx" />
+    <Content Include="All\Pages\User\ViewTS.aspx" />
+    <Content Include="All\Resources\Icon.png" />
+    <Content Include="All\Resources\LogoUcabLine.png" />
+    <Content Include="All\Style\ResponsiveStyle.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="All\MasterPages\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\MasterPages\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="All\MasterPages\EditData.Master.cs">
+      <DependentUpon>EditData.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\MasterPages\EditData.Master.designer.cs">
+      <DependentUpon>EditData.Master</DependentUpon>
+    </Compile>
+    <Compile Include="All\MasterPages\Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\MasterPages\Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="All\MasterPages\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\MasterPages\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\CreateL.aspx.cs">
+      <DependentUpon>CreateL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\CreateL.aspx.designer.cs">
+      <DependentUpon>CreateL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\CreateS.aspx.cs">
+      <DependentUpon>CreateS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\CreateS.aspx.designer.cs">
+      <DependentUpon>CreateS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\CreateTD.aspx.cs">
+      <DependentUpon>CreateTD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\CreateTD.aspx.designer.cs">
+      <DependentUpon>CreateTD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\CreateTS.aspx.cs">
+      <DependentUpon>CreateTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\CreateTS.aspx.designer.cs">
+      <DependentUpon>CreateTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\EditData.aspx.cs">
+      <DependentUpon>EditData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\EditData.aspx.designer.cs">
+      <DependentUpon>EditData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\MainAdmin.aspx.cs">
+      <DependentUpon>MainAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\MainAdmin.aspx.designer.cs">
+      <DependentUpon>MainAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\ModifyL.aspx.cs">
+      <DependentUpon>ModifyL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\ModifyL.aspx.designer.cs">
+      <DependentUpon>ModifyL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\ModifyS.aspx.cs">
+      <DependentUpon>ModifyS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\ModifyS.aspx.designer.cs">
+      <DependentUpon>ModifyS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\ModifySL.aspx.cs">
+      <DependentUpon>ModifySL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\ModifySL.aspx.designer.cs">
+      <DependentUpon>ModifySL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\ModifySS.aspx.cs">
+      <DependentUpon>ModifySS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\ModifySS.aspx.designer.cs">
+      <DependentUpon>ModifySS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\RemoveL.aspx.cs">
+      <DependentUpon>RemoveL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\RemoveL.aspx.designer.cs">
+      <DependentUpon>RemoveL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\RemoveS.aspx.cs">
+      <DependentUpon>RemoveS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\RemoveS.aspx.designer.cs">
+      <DependentUpon>RemoveS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\RemoveTD.aspx.cs">
+      <DependentUpon>RemoveTD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\RemoveTD.aspx.designer.cs">
+      <DependentUpon>RemoveTD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\RemoveTS.aspx.cs">
+      <DependentUpon>RemoveTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\RemoveTS.aspx.designer.cs">
+      <DependentUpon>RemoveTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\ViewTD.aspx.cs">
+      <DependentUpon>ViewTD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\ViewTD.aspx.designer.cs">
+      <DependentUpon>ViewTD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Admin\ViewTS.aspx.cs">
+      <DependentUpon>ViewTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Admin\ViewTS.aspx.designer.cs">
+      <DependentUpon>ViewTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\User\MainUser.aspx.cs">
+      <DependentUpon>MainUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\User\MainUser.aspx.designer.cs">
+      <DependentUpon>MainUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\User\ViewL.aspx.cs">
+      <DependentUpon>ViewL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\User\ViewL.aspx.designer.cs">
+      <DependentUpon>ViewL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\User\ViewS.aspx.cs">
+      <DependentUpon>ViewS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\User\ViewS.aspx.designer.cs">
+      <DependentUpon>ViewS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\User\ViewTD.aspx.cs">
+      <DependentUpon>ViewTD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\User\ViewTD.aspx.designer.cs">
+      <DependentUpon>ViewTD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All\Pages\User\ViewTS.aspx.cs">
+      <DependentUpon>ViewTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All\Pages\User\ViewTS.aspx.designer.cs">
+      <DependentUpon>ViewTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="All\MasterPages\Main.Master" />
+    <Content Include="All\MasterPages\Admin.Master" />
+    <Content Include="All\MasterPages\Login.Master" />
+    <Content Include="All\MasterPages\EditData.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:19255/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

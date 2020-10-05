@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Administrador/Admin.Master" AutoEventWireup="true" CodeBehind="Administrador.master.cs" Inherits="PruebaFinal.Administrador.Administrador" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContenidoMenu" runat="server">
+        <ul id="MenuContextual">
+        <li> <a href="CrearL.aspx">Crear línea</a></li>
+        <li> <a href="CrearE.aspx">Crear estación</a></li>
+        <li> <a href="CrearT.aspx">Crear trasbordo</a></li>
+        <li> <a href="ModL.aspx">Modificar línea</a></li>
+        <li> <a href="ModE.aspx">Modificar estación</a></li>
+        <li> <a href="ModEstado.aspx">Visualizar y modificar estado de la línea</a></li>
+        <li> <a href="Mostrar.aspx">Visualizar trasbordos y estaciones (modificar estado de estaciones) </a></li>
+        <li> <a href="EliL.aspx">Eliminar línea</a></li>
+        <li> <a href="EliE.aspx">Eliminar estación</a></li>
+        <li> <a href="EliT.aspx">Eliminar trasbordo</a></li>
+    </ul>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContenidoPrincipal" runat="server">
+    <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server">  
+    </asp:ContentPlaceHolder>
+</asp:Content>

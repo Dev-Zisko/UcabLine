@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="PruebaFinal.Administrador.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="Icon/jpg" href="/Resources/Imagenes/Icon.png" />
+    <link href="/Resources/Style/Estilo.css" rel="stylesheet" type="text/css" />
+    <title>UcabLine</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="Cabecera">
+            <img src="/Resources/Imagenes/LogoUcabLine.png" />
+            <ul>
+                <li><a href="/Default.aspx">Salir</a></li>
+                <li><a href="/Administrador/EditLogin.aspx">Editar datos de la cuenta</a></li>
+            </ul>
+        </div>
+        <div id="Contenido">
+              <div id="MenuIz">
+              <asp:ContentPlaceHolder ID="ContenidoMenu" runat="server">
+              </asp:ContentPlaceHolder>
+              </div>
+        <div id="Central">
+            <asp:ContentPlaceHolder ID="ContenidoPrincipal" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="Pie">
+            <span>© Copyright 2016 UcabLine. Todos los derechos reservados.</span>
+        </div>
+
+        </div>
+    </div>
+    </form>
+</body>
+</html>

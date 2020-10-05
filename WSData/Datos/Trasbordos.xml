@@ -1,0 +1,26 @@
+<Trasbordos>
+  <Simples>
+    <TrasbordoS>
+      <Lineas>
+        <Linea>
+          <NombreLinea>L1</NombreLinea>
+        </Linea>
+        <Linea>
+          <NombreLinea>L2</NombreLinea>
+        </Linea>
+        <Linea>
+          <NombreLinea>L3</NombreLinea>
+        </Linea>
+      </Lineas>
+      <NombreEstacion>E13</NombreEstacion>
+    </TrasbordoS>
+  </Simples>
+  <Dobles>
+    <TrasbordoD>
+      <Linea1>L1</Linea1>
+      <Linea2>L2</Linea2>
+      <Estacion1>E14</Estacion1>
+      <Estacion2>E24</Estacion2>
+    </TrasbordoD>
+  </Dobles>
+</Trasbordos>

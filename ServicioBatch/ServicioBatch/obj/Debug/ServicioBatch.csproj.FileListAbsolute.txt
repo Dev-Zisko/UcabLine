@@ -1,0 +1,15 @@
+C:\Users\chdra\Desktop\ProyectoIS Version3.00\ServicioBatch\ServicioBatch\bin\Debug\ServicioBatch.exe.config
+C:\Users\chdra\Desktop\ProyectoIS Version3.00\ServicioBatch\ServicioBatch\bin\Debug\ServicioBatch.exe
+C:\Users\chdra\Desktop\ProyectoIS Version3.00\ServicioBatch\ServicioBatch\bin\Debug\ServicioBatch.pdb
+C:\Users\chdra\Desktop\ProyectoIS Version3.00\ServicioBatch\ServicioBatch\obj\Debug\ServicioBatch.ProjectInstaller.resources
+C:\Users\chdra\Desktop\ProyectoIS Version3.00\ServicioBatch\ServicioBatch\obj\Debug\ServicioBatch.csproj.GenerateResource.Cache
+C:\Users\chdra\Desktop\ProyectoIS Version3.00\ServicioBatch\ServicioBatch\obj\Debug\ServicioBatch.exe
+C:\Users\chdra\Desktop\ProyectoIS Version3.00\ServicioBatch\ServicioBatch\obj\Debug\ServicioBatch.pdb
+C:\Users\chdra\Desktop\PROYECTOS\ProyectoIS Version3.1\ServicioBatch\ServicioBatch\bin\Debug\ServicioBatch.exe.config
+C:\Users\chdra\Desktop\PROYECTOS\ProyectoIS Version3.1\ServicioBatch\ServicioBatch\obj\Debug\ServicioBatch.exe
+C:\Users\chdra\Desktop\PROYECTOS\ProyectoIS Version3.1\ServicioBatch\ServicioBatch\obj\Debug\ServicioBatch.pdb
+C:\Users\chdra\Desktop\PROYECTOS\ProyectoIS Version3.1\ServicioBatch\ServicioBatch\bin\Debug\ServicioBatch.exe
+C:\Users\chdra\Desktop\PROYECTOS\ProyectoIS Version3.1\ServicioBatch\ServicioBatch\bin\Debug\ServicioBatch.pdb
+C:\Users\chdra\Desktop\PROYECTOS\ProyectoIS Version3.1\ServicioBatch\ServicioBatch\obj\Debug\ServicioBatch.csprojResolveAssemblyReference.cache
+C:\Users\chdra\Desktop\PROYECTOS\ProyectoIS Version3.1\ServicioBatch\ServicioBatch\obj\Debug\ServicioBatch.ProjectInstaller.resources
+C:\Users\chdra\Desktop\PROYECTOS\ProyectoIS Version3.1\ServicioBatch\ServicioBatch\obj\Debug\ServicioBatch.csproj.GenerateResource.Cache

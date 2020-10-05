@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0c3009af-1221-424a-81b9-a99dff30df4d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:43279/WSData/Service.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="235e66fb-ac9a-4ef0-838a-59a8205e26b2" SourceId="1" SourceUrl="http://localhost:43279/WSData/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="74aba9a5-9e85-4286-bd56-b462974f886a" SourceId="1" SourceUrl="http://localhost:43279/WSData/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="2e04c509-697d-49d7-8bcd-b05efdc23002" SourceId="1" SourceUrl="http://localhost:43279/WSData/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="a9dd2151-f6c4-42e8-9e9a-abb79d87db25" SourceId="1" SourceUrl="http://localhost:43279/WSData/Service.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServicioData.wsdl" MetadataType="Wsdl" ID="d52251f4-085a-4d65-84af-b34a24d5234b" SourceId="1" SourceUrl="http://localhost:43279/WSData/Service.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

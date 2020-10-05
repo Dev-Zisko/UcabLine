@@ -1,0 +1,5 @@
+C:\Users\Owner\Desktop\Pagina\ResponsiveInterfaz\ResponsiveInterfaz\bin\ResponsiveInterfaz.dll
+C:\Users\Owner\Desktop\Pagina\ResponsiveInterfaz\ResponsiveInterfaz\bin\ResponsiveInterfaz.pdb
+C:\Users\Owner\Desktop\Pagina\ResponsiveInterfaz\ResponsiveInterfaz\obj\Debug\ResponsiveInterfaz.csprojResolveAssemblyReference.cache
+C:\Users\Owner\Desktop\Pagina\ResponsiveInterfaz\ResponsiveInterfaz\obj\Debug\ResponsiveInterfaz.dll
+C:\Users\Owner\Desktop\Pagina\ResponsiveInterfaz\ResponsiveInterfaz\obj\Debug\ResponsiveInterfaz.pdb
